@@ -10,8 +10,11 @@ You can also add your user in the rocket group to be able to list images and pod
 
 ## Nodejs ACI image creation
 
-Just run the image_create.sh script and now you have a nodeslim.aci file which is your rocket
+Just run the init.sh script and now you have a nodeslim.aci file which is your rocket
 image to run.
+
+This init script also installs the node dependencies of the konnector. That is why you need to have
+nodejs and npm installed on your host at the moment for this to work at the moment.
 
 ## Run the experimental trainline konnector
 
