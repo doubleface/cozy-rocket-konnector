@@ -23,10 +23,11 @@ Just run:
 run_konnector.sh login password
 ```
 
-where login is your trainline login (your email) and password is your trainline password
+where *login* is your trainline login (your email) and *password* is your trainline password
+
+The script will ask you your password since rocket needs root rights to run the containers.
 
 This modified konnector only fetches data from trainline and display it in the standard output at the
 moment
-
 
 
