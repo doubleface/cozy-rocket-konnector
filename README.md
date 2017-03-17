@@ -20,12 +20,12 @@ Your are now ready to run the joined trainline konnector.
 Just run:
 
 ```
-run_konnector.sh <login> <password>
+run_konnector.sh login password
 ```
 
-where <login> is your trainline login and <password> is your trainline password
+where login is your trainline login (your email) and password is your trainline password
 
-This modified konnector only fetch data from trainline and display it in the standard output at the
+This modified konnector only fetches data from trainline and display it in the standard output at the
 moment
 
 
