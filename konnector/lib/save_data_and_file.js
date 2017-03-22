@@ -13,10 +13,10 @@ const moment = require('moment')
 module.exports = (log, model, options, tags) => {
   return function (requiredFields, entries, body, next) {
     const entriesToSave = entries.filtered || entries.fetched
-    const path = requiredFields.folderPath
+    // const path = requiredFields.folderPath
 
-    const normalizedPath = path.charAt(0) === '/'
-      ? path : `/${path}`
+    // const normalizedPath = path.charAt(0) === '/'
+    //   ? path : `/${path}`
 
     // For each entry...
     return async.eachSeries(entriesToSave, function (entry, callback) {
@@ -26,7 +26,6 @@ module.exports = (log, model, options, tags) => {
       }
 
       const entryLabel = entry.date.format('MMYYYY')
-      // const fileName = naming.getEntryFileName(entry, options)
 
       const createFileAndSaveData = function (entry, entryLabel) {
         // Legacy code: Date is not used in File Model
@@ -81,29 +80,30 @@ module.exports = (log, model, options, tags) => {
       }
 
       log.info(`import for entry ${entryLabel} started.`)
-      if (entry.pdfurl != null) {
-        // It creates a file for the PDF.
-        return createFileAndSaveData(entry, entryLabel)
-      } else {
-        // If there is no file link set, it saves only data.
-        log.info(`No file to download for ${entryLabel}.`)
+      // if (entry.pdfurl != null) {
+      //   // It creates a file for the PDF.
+      //   return createFileAndSaveData(entry, entryLabel)
+      // } else {
+      //   // If there is no file link set, it saves only data.
+      //   log.info(`No file to download for ${entryLabel}.`)
         return saveEntry(entry, entryLabel)
-      }
+      // }
     }, function (err) {
       if (err) {
         log.error(err)
         return next()
       }
 
-      const opts = {
-        entries: entries.fetched,
-        folderPath: normalizedPath,
-        nameOptions: options,
-        tags,
-        model,
-        log
-      }
-      return checkForMissingFiles(opts, () => next())
+      // const opts = {
+      //   entries: entries.fetched,
+      //   folderPath: normalizedPath,
+      //   nameOptions: options,
+      //   tags,
+      //   model,
+      //   log
+      // }
+      next()
+      // return checkForMissingFiles(opts, () => next())
     })
   }
 }

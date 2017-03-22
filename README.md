@@ -30,8 +30,23 @@ where *login* is your trainline login (your email) and *password* is your trainl
 
 The script will ask you your password since rocket needs root rights to run the containers.
 
-This modified konnector only fetches data from trainline and display it in the standard output at the
-moment
+This modified konnector only fetches data from trainline and put it in a running cozy-stack (the
+one from the docker image works with it)
+
+But you will need to get the credentials from the cozy stack before runnning the konnector. Just
+run :
+
+```
+cd konnector
+node gettoken.js
+```
+
+And you will be asked to open an url in your browser. When this is done, a new file will appear in
+the konnector directory : token.json
+
+This json file will be used by the konnector to get permission to talk to the cozy stack.
+
+Then you can run the konnector with the usual command
 
 ## Run the fork bomb test
 
