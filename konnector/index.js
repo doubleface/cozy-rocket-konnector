@@ -1,5 +1,7 @@
 const konnector = require('./trainline')
-const [un, deux, login, password, folderPath] = process.argv
+const login = process.argv[2]
+const password = process.argv[3]
+const folderPath = process.argv[4]
 
 konnector.fetch({login, password, folderPath}, err => {
   console.log('The konnector has been run')
