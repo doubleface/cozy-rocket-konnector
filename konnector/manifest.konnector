@@ -12,6 +12,9 @@
       "permissions": {
         "bills": {
           "description": "Utilisé pour sauvegarder les données de facturation"
+        },
+        "files": {
+          "description": "Utilisé pour sauvegarder les factures"
         }
       }
     }
@@ -20,6 +23,10 @@
     "bills": {
       "description": "Required to save the bills data",
       "type": "io.cozy.bills"
+    },
+    "files": {
+      "description": "Required to save the bills",
+      "type": "io.cozy.files"
     }
   },
   "developer": {

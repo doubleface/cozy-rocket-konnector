@@ -23,15 +23,16 @@ Your are now ready to run the joined trainline konnector.
 Just run:
 
 ```
-run_konnector.sh konnector login password
+run_konnector.sh konnector login password folderPath
 ```
 
-where *login* is your trainline login (your email) and *password* is your trainline password
+where *login* is your trainline login (your email) and *password* is your trainline password, and
+*folderPath* is the path where the trainline pdf bills will be saved
 
 The script will ask you your password since rocket needs root rights to run the containers.
 
 This modified konnector only fetches data from trainline and put it in a running cozy-stack (the
-one from the docker image works with it)
+one from the docker image works fine with it)
 
 But you will need to get the credentials from the cozy stack before runnning the konnector. Just
 run :
@@ -49,6 +50,9 @@ This json file will be used by the konnector to get permission to talk to the co
 Then you can run the konnector with the usual command
 
 ## Run the fork bomb test
+
+This is just a script to show that a forkbomb run in a rocket container with proper parameters will
+crash the host.
 
 Just run:
 

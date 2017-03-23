@@ -340,12 +340,6 @@ function fetchBills (requiredFields, entries, data, next) {
   next()
 }
 
-function displayBills (requiredFields, entries, data, next) {
-  console.log('Here is the list of bills you fetched from trainline')
-  console.log(entries)
-  next()
-}
-
 function customFilterExisting (requiredFields, entries, data, next) {
   filterExisting(logger, Bill)(requiredFields, entries, data, next)
 }
