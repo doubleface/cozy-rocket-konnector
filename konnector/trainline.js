@@ -49,7 +49,6 @@ module.exports = baseKonnector.createNew({
   fetchOperations: [
     login,
     fetchBills,
-    // displayBills,
     customFilterExisting,
     customSaveDataAndFile,
     buildNotifContent
